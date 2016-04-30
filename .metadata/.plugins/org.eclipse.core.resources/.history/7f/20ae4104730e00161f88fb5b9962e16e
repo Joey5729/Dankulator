@@ -1,0 +1,52 @@
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.FontMetrics;
+
+import javax.swing.JFrame;
+
+public class Calculator {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculator window = new Calculator();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Calculator() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 838, 494);
+		Font f = frame.getFont();
+		FontMetrics fm = frame.getFontMetrics(f);
+		int x = fm.stringWidth("Scientific Calculator");
+		int y = fm.stringWidth(" ");
+		int z = frame.getWidth()/2 - (x/2);
+		int w = z/y;
+		String add = "";
+		add = String.format("%"+w+"s", add);
+		frame.setTitle(add+"Scientific Calculator");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
