@@ -1,0 +1,21 @@
+public class CalculatorFunctions {
+	
+public static String operation;
+
+public static double computation(String num1, String num2){
+	double val1 = Double.parseDouble(num1), val2 = Double.parseDouble(num2), result = 0;
+	if(operation.equals("plus"))
+	 result = add(val1,val2);
+	else if(operation.equals("minus"))
+	 result = subtract(val1,val2);
+	return result;
+}
+
+public static double add(double num1, double num2){
+	return num1 + num2;
+}
+
+public static double subtract(double num1, double num2){
+	return num1 - num2;
+}
+}

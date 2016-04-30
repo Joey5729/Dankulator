@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class CalculatorFunctions {
+	
+public static ArrayList<Double> numbers = new ArrayList<Double>();
+public static ArrayList<String> operations = new ArrayList<String>();
+
+public double computation(){
+	double result = 0;
+	for(int r=0; r<operations.size(); r++){
+		if(operations.get(r).equals("plus")){
+			result = add(numbers.get(r),numbers.get(r+1));
+		}
+	}
+	return result;
+}
+
+public double add(double num1, double num2){
+	return num1 + num2;
+}
+}
