@@ -1,0 +1,286 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class Calculator {
+
+	private JFrame frame;
+	private JTextField numberInput;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculator window = new Calculator();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Calculator() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 842, 456);
+		frame.setTitle("Scientific Calculator");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		numberInput = new JTextField();
+		numberInput.setBounds(12, 13, 798, 47);
+		frame.getContentPane().add(numberInput);
+		numberInput.setColumns(10);
+		
+		JButton memoryMinus = new JButton("M-");
+		memoryMinus.setBounds(741, 73, 69, 43);
+		frame.getContentPane().add(memoryMinus);
+		
+		JButton memoryPlus = new JButton("M+");
+		memoryPlus.setBounds(660, 73, 69, 43);
+		frame.getContentPane().add(memoryPlus);
+		
+		JButton memoryRecall = new JButton("MR");
+		memoryRecall.setBounds(498, 73, 69, 43);
+		frame.getContentPane().add(memoryRecall);
+		
+		JButton memoryClear = new JButton("MC");
+		memoryClear.setBounds(417, 73, 69, 43);
+		frame.getContentPane().add(memoryClear);
+		
+		JButton memoryStore = new JButton("MS");
+		memoryStore.setBounds(579, 73, 69, 43);
+		frame.getContentPane().add(memoryStore);
+		
+		JRadioButton degreesCircle = new JRadioButton("Degrees");
+		degreesCircle.setBounds(12, 73, 87, 43);
+		frame.getContentPane().add(degreesCircle);
+		
+		JRadioButton radiansCircle = new JRadioButton("Radians");
+		radiansCircle.setBounds(157, 71, 78, 47);
+		frame.getContentPane().add(radiansCircle);
+		
+		JButton secondRoot = new JButton("\u221A");
+		secondRoot.setBounds(741, 129, 69, 43);
+		frame.getContentPane().add(secondRoot);
+		
+		JButton plusMinus = new JButton("\u00B1");
+		plusMinus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		plusMinus.setBounds(660, 129, 69, 43);
+		frame.getContentPane().add(plusMinus);
+		
+		JButton clear = new JButton("C");
+		clear.setBounds(579, 129, 69, 43);
+		frame.getContentPane().add(clear);
+		
+		JButton backspace = new JButton("\u2190 ");
+		backspace.setBounds(417, 129, 69, 43);
+		frame.getContentPane().add(backspace);
+		
+		JButton clearEntry = new JButton("CE");
+		clearEntry.setBounds(498, 129, 69, 43);
+		frame.getContentPane().add(clearEntry);
+		
+		JButton rightPar = new JButton(")");
+		rightPar.setBounds(336, 128, 69, 45);
+		frame.getContentPane().add(rightPar);
+		
+		JButton leftPar = new JButton("(");
+		leftPar.setBounds(255, 128, 69, 45);
+		frame.getContentPane().add(leftPar);
+		
+		JButton eTwo = new JButton("e\u00B2");
+		eTwo.setBounds(174, 129, 69, 43);
+		frame.getContentPane().add(eTwo);
+		
+		JButton eOne = new JButton("e");
+		eOne.setBounds(93, 129, 69, 43);
+		frame.getContentPane().add(eOne);
+		
+		JButton naturalLog = new JButton("ln");
+		naturalLog.setBounds(12, 129, 69, 43);
+		frame.getContentPane().add(naturalLog);
+		
+		JRadioButton gradsCircle = new JRadioButton("Grads");
+		gradsCircle.setBounds(306, 75, 78, 39);
+		frame.getContentPane().add(gradsCircle);
+		
+		JButton Int = new JButton("Int");
+		Int.setBounds(12, 185, 69, 43);
+		frame.getContentPane().add(Int);
+		
+		JButton sine = new JButton("sin");
+		sine.setBounds(93, 185, 69, 43);
+		frame.getContentPane().add(sine);
+		
+		JButton sineInverse = new JButton("sin\u207B\u00B9");
+		sineInverse.setBounds(174, 186, 69, 42);
+		frame.getContentPane().add(sineInverse);
+		
+		JButton xSecond = new JButton("\u00D7\u00B2");
+		xSecond.setBounds(255, 186, 69, 42);
+		frame.getContentPane().add(xSecond);
+		
+		JButton xFactorial = new JButton("x!");
+		xFactorial.setBounds(336, 185, 69, 43);
+		frame.getContentPane().add(xFactorial);
+		
+		JButton seven = new JButton("7");
+		seven.setBounds(417, 185, 69, 43);
+		frame.getContentPane().add(seven);
+		
+		JButton eight = new JButton("8");
+		eight.setBounds(498, 185, 69, 43);
+		frame.getContentPane().add(eight);
+		
+		JButton nine = new JButton("9");
+		nine.setBounds(579, 185, 69, 43);
+		frame.getContentPane().add(nine);
+		
+		JButton backSlash = new JButton("/");
+		backSlash.setBounds(660, 185, 69, 43);
+		frame.getContentPane().add(backSlash);
+		
+		JButton percent = new JButton("%");
+		percent.setBounds(741, 185, 69, 43);
+		frame.getContentPane().add(percent);
+		
+		JButton binary = new JButton("Bin");
+		binary.setBounds(12, 241, 69, 43);
+		frame.getContentPane().add(binary);
+		
+		JButton cosine = new JButton("cos");
+		cosine.setBounds(93, 241, 69, 43);
+		frame.getContentPane().add(cosine);
+		
+		JButton cosineInverse = new JButton("cos\u207B\u00B9");
+		cosineInverse.setBounds(174, 241, 69, 43);
+		frame.getContentPane().add(cosineInverse);
+		
+		JButton xThird = new JButton("\u00D7\u00B3");
+		xThird.setBounds(255, 241, 69, 43);
+		frame.getContentPane().add(xThird);
+		
+		JButton thirdRoot = new JButton("\u221B");
+		thirdRoot.setBounds(336, 241, 69, 43);
+		frame.getContentPane().add(thirdRoot);
+		
+		JButton fourthRoot = new JButton("\u221C");
+		fourthRoot.setBounds(336, 297, 69, 43);
+		frame.getContentPane().add(fourthRoot);
+		
+		JButton xFourth = new JButton("x\u2074");
+		xFourth.setBounds(255, 297, 69, 43);
+		frame.getContentPane().add(xFourth);
+		
+		JButton four = new JButton("4");
+		four.setBounds(417, 241, 69, 43);
+		frame.getContentPane().add(four);
+		
+		JButton five = new JButton("5");
+		five.setBounds(498, 241, 69, 43);
+		frame.getContentPane().add(five);
+		
+		JButton six = new JButton("6");
+		six.setBounds(579, 241, 69, 43);
+		frame.getContentPane().add(six);
+		
+		JButton one = new JButton("1");
+		one.setBounds(417, 297, 69, 43);
+		frame.getContentPane().add(one);
+		
+		JButton two = new JButton("2");
+		two.setBounds(498, 297, 69, 43);
+		frame.getContentPane().add(two);
+		
+		JButton three = new JButton("3");
+		three.setBounds(579, 297, 69, 43);
+		frame.getContentPane().add(three);
+		
+		JButton multiply = new JButton("*");
+		multiply.setBounds(660, 241, 69, 43);
+		frame.getContentPane().add(multiply);
+		
+		JButton oneOverX = new JButton("1/x");
+		oneOverX.setBounds(741, 241, 69, 43);
+		frame.getContentPane().add(oneOverX);
+		
+		JButton minus = new JButton("-");
+		minus.setBounds(660, 297, 69, 43);
+		frame.getContentPane().add(minus);
+		
+		JButton plus = new JButton("+");
+		plus.setBounds(660, 353, 69, 43);
+		frame.getContentPane().add(plus);
+		
+		JButton decimalPoint = new JButton(".");
+		decimalPoint.setBounds(579, 353, 69, 43);
+		frame.getContentPane().add(decimalPoint);
+		
+		JButton equals = new JButton("=");
+		equals.setBounds(741, 297, 69, 99);
+		frame.getContentPane().add(equals);
+		
+		JButton dms = new JButton("dms");
+		dms.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		dms.setBounds(12, 297, 69, 43);
+		frame.getContentPane().add(dms);
+		
+		JButton pi = new JButton("\u03C0");
+		pi.setFont(new Font("Times New Roman", Font.PLAIN, 13));
+		pi.setBounds(12, 353, 69, 43);
+		frame.getContentPane().add(pi);
+		
+		JButton tangentInverse = new JButton("tan\u207B\u00B9");
+		tangentInverse.setBounds(174, 297, 69, 43);
+		frame.getContentPane().add(tangentInverse);
+		
+		JButton tangent = new JButton("tan");
+		tangent.setBounds(93, 297, 69, 43);
+		frame.getContentPane().add(tangent);
+		
+		JButton tau = new JButton("\u03C4");
+		tau.setFont(new Font("Times New Roman", Font.PLAIN, 13));
+		tau.setBounds(93, 353, 69, 43);
+		frame.getContentPane().add(tau);
+		
+		JButton mod = new JButton("Mod");
+		mod.setBounds(174, 353, 69, 43);
+		frame.getContentPane().add(mod);
+		
+		JButton log = new JButton("log");
+		log.setBounds(255, 353, 69, 43);
+		frame.getContentPane().add(log);
+		
+		JButton tenToTheX = new JButton("10^x");
+		tenToTheX.setBounds(336, 353, 69, 43);
+		frame.getContentPane().add(tenToTheX);
+		
+		JButton zero = new JButton("0");
+		zero.setBounds(417, 353, 150, 43);
+		frame.getContentPane().add(zero);
+	}
+}

@@ -1,0 +1,94 @@
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Button;
+
+public class Calculator {
+
+	protected Shell shell;
+	private Text numberInput;
+
+	/**
+	 * Launch the application.
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try {
+			Calculator window = new Calculator();
+			window.open();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Open the window.
+	 */
+	public void open() {
+		Display display = Display.getDefault();
+		createContents();
+		shell.open();
+		shell.layout();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch()) {
+				display.sleep();
+			}
+		}
+	}
+
+	/**
+	 * Create contents of the window.
+	 */
+	protected void createContents() {
+		shell = new Shell();
+		shell.setSize(844, 460);
+		shell.setText("SWT Application");
+		shell.setLayout(null);
+		
+		numberInput = new Text(shell, SWT.BORDER);
+		numberInput.setBounds(119, 57, 78, 26);
+		
+		Button degreesCircle = new Button(shell, SWT.RADIO);
+		degreesCircle.setBounds(151, 182, 111, 20);
+		degreesCircle.setText("Degrees");
+		
+		Button radiansCircle = new Button(shell, SWT.RADIO);
+		radiansCircle.setBounds(151, 250, 111, 20);
+		radiansCircle.setText("Radians");
+		
+		Button gradsCircle = new Button(shell, SWT.RADIO);
+		gradsCircle.setBounds(175, 345, 111, 20);
+		gradsCircle.setText("Grads");
+		
+		Button memoryMinus = new Button(shell, SWT.NONE);
+		memoryMinus.setBounds(443, 182, 90, 30);
+		memoryMinus.setText("M-");
+		
+		Button memoryPlus = new Button(shell, SWT.NONE);
+		memoryPlus.setBounds(443, 268, 90, 30);
+		memoryPlus.setText("M+");
+		
+		Button memoryStore = new Button(shell, SWT.NONE);
+		memoryStore.setBounds(324, 182, 90, 30);
+		memoryStore.setText("MS");
+		
+		Button memoryClear = new Button(shell, SWT.NONE);
+		memoryClear.setBounds(324, 282, 90, 30);
+		memoryClear.setText("MC");
+		
+		Button memoryRecall = new Button(shell, SWT.NONE);
+		memoryRecall.setBounds(393, 345, 90, 30);
+		memoryRecall.setText("MR");
+		
+		Button secondRoot = new Button(shell, SWT.NONE);
+		secondRoot.setBounds(595, 171, 90, 30);
+		secondRoot.setText("\u221A");
+		
+		Button plusMinus = new Button(shell, SWT.NONE);
+		plusMinus.setBounds(654, 268, 90, 30);
+		plusMinus.setText("\u00B1");
+		
+
+	}
+}
