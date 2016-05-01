@@ -137,35 +137,35 @@ public static double sine(double num, int type){
 
 public static double cosine(double num, int type){
 	if(type==1)
-		return Math.cos(Math.toDegrees(num));
+		return Math.toDegrees(Math.cos(num));
 	else
 		return Math.cos(num);
 }
 
 public static double tangent(double num, int type){
 	if(type==1)
-		return Math.tan(Math.toDegrees(num));
+		return Math.toDegrees(Math.tan(num));
 	else
 		return Math.tan(num);
 }
 
 public static double sineInverse(double num, int type){
 	if(type==1)
-		return Math.asin(Math.toDegrees(num));
+		return Math.toDegrees(Math.asin(num));
 	else
 		return Math.asin(num);
 }
 
 public static double cosineInverse(double num, int type){
 	if(type==1)
-		return Math.acos(Math.toDegrees(num));
+		return Math.toDegrees(Math.acos(num));
 	else
 		return Math.acos(num);
 }
 
 public static double tangentInverse(double num, int type){
 	if(type==1)
-		return Math.atan(Math.toDegrees(num));
+		return Math.toDegrees(Math.atan(num));
 	else
 		return Math.tan(num);
 }

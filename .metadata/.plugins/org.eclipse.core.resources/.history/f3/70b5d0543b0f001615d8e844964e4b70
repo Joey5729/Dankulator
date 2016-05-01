@@ -263,7 +263,7 @@ public class Calculator {
 		sine.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.sine(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.sine(Double.parseDouble(numberInput.getText()),0)));
@@ -276,7 +276,7 @@ public class Calculator {
 		sineInverse.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.sineInverse(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.sineInverse(Double.parseDouble(numberInput.getText()),0)));
@@ -373,7 +373,7 @@ public class Calculator {
 		cosine.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.cosine(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.cosine(Double.parseDouble(numberInput.getText()),0)));
@@ -386,7 +386,7 @@ public class Calculator {
 		cosineInverse.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.cosineInverse(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.cosineInverse(Double.parseDouble(numberInput.getText()),0)));
@@ -595,7 +595,7 @@ public class Calculator {
 		tangentInverse.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.tangentInverse(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.tangentInverse(Double.parseDouble(numberInput.getText()),0)));
@@ -608,7 +608,7 @@ public class Calculator {
 		tangent.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(degreesCircle.getSelection() == true)
+				if(change == 1)
 					numberInput.setText(String.valueOf(CalculatorFunctions.tangent(Double.parseDouble(numberInput.getText()),1)));
 				else
 					numberInput.setText(String.valueOf(CalculatorFunctions.tangent(Double.parseDouble(numberInput.getText()),0)));
