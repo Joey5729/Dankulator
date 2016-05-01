@@ -1,0 +1,108 @@
+public class CalculatorFunctions {
+	
+public static String operation;
+public static double memory = 0;
+
+public static double computation(String num1, String num2){
+	double val1 = Double.parseDouble(num1), val2 = Double.parseDouble(num2), result = 0;
+	if(operation.equals("plus"))
+	 result = add(val1,val2);
+	else if(operation.equals("minus"))
+	 result = subtract(val1,val2);
+	else if(operation.equals("times"))
+	 result = multiply(val1,val2);
+	else if(operation.equals("divide"))
+		 result = divide(val1,val2);
+	else if(operation.equals("percent"))
+		 result = percent(val1,val2);
+	return result;
+}
+
+public static void setOperation(String set){
+	operation = set;
+}
+
+public static String getOperation(){
+	return operation;
+}
+
+public static void setMemory(double set){
+	memory = set;
+}
+
+public static double getMemory(){
+	return memory;
+}
+
+public static void memoryAdd(double num1){
+	memory += num1;
+}
+
+public static void memorySubtract(double num1){
+	memory -= num1;
+}
+
+public static double add(double num1, double num2){
+	return num1 + num2;
+}
+
+public static double subtract(double num1, double num2){
+	return num1 - num2;
+}
+
+public static double multiply(double num1, double num2){
+	return num1 * num2;
+}
+
+public static double divide(double num1, double num2){
+	return num1 / num2;
+}
+
+public static double oneOverX(double num1){
+	return 1.0 / num1;
+}
+
+public static double percent(double num1, double num2){
+	return (num1 * num2) / 100.0;
+}
+
+public static double plusMinus(double num1){
+	return -1.0*num1;
+}
+
+public static double secondRoot(double num1){
+	return Math.sqrt(num1);
+}
+
+public static double thirdRoot(double num1){
+	return Math.cbrt(num1);
+}
+
+public static double ePower(int power){
+	return Math.pow(Math.E, power);
+}
+
+public static double naturalLog(double num1){
+	return Math.log(num1);
+}
+
+public static double log(double num1){
+	return Math.log10(num1);
+}
+
+public static double xFactorial(double num1){
+	int result = 1;
+	for(int r=1; r<= num1; r++){
+		result *= r;
+	}
+	return result;
+}
+
+public static int random(){
+	return 1 + (int)(Math.random()*100);
+}
+
+public static double tenToTheX(double num1){
+	return Math.pow(10, num1);
+}
+}
